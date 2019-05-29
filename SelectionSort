@@ -1,32 +1,39 @@
-class Program
+  class Program
     {
         static void Main(string[] args)
         {
 
             int[] Array = { 2, 7, 4, 1, 5, 3 };
-            selectionSort(Array, Array.Length);
-            
-            Console.WriteLine("Sorted");
-            for (int i = 0; i < arr.Length; i++)
+            Console.WriteLine("UnSorted");
+            for (int i = 0; i < Array.Length; i++)
             {
                 Console.Write(Array[i] + " ");
             }
-            
+            selectionSort(Array, Array.Length);
+
+            Console.WriteLine("\nSorted");
+            for (int i = 0; i < Array.Length; i++)
+            {
+                Console.Write(Array[i] + " ");
+            }
+            Console.WriteLine("\n");
+
+
 
         }
 
-        static void selectionSort(int [] Array,int n)
+        static void selectionSort(int[] Array, int n)
         {
-           
+
             for (int i = 0; i < n - 2; i++)
             {
                 int min = i;
                 for (int j = i + 1; j < n; j++)
                 {
-                    Console.WriteLine(Array[j] + "<"+Array[min]);
+                 
                     if (Array[j] < Array[min])
                     {
-                        Console.WriteLine("true");
+                 
                         min = j;
 
                     }
