@@ -6,6 +6,12 @@ class Program
             int[] Array = { 2, 7, 4, 1, 5, 3 };
             selectionSort(Array, Array.Length);
             
+            Console.WriteLine("Sorted");
+            for (int i = 0; i < arr.Length; i++)
+            {
+                Console.Write(Array[i] + " ");
+            }
+            
 
         }
 
