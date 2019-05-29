@@ -1,0 +1,36 @@
+class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int[] Array = { 2, 7, 4, 1, 5, 3 };
+            selectionSort(Array, Array.Length);
+            
+
+        }
+
+        static void selectionSort(int [] Array,int n)
+        {
+           
+            for (int i = 0; i < n - 2; i++)
+            {
+                int min = i;
+                for (int j = i + 1; j < n; j++)
+                {
+                    Console.WriteLine(Array[j] + "<"+Array[min]);
+                    if (Array[j] < Array[min])
+                    {
+                        Console.WriteLine("true");
+                        min = j;
+
+                    }
+                }
+                int temp = Array[i];
+                Array[i] = Array[min];
+                Array[min] = temp;
+            }
+
+
+
+        }
+    }
