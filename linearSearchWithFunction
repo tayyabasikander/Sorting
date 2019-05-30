@@ -1,0 +1,61 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace binary_searchd_isplay
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] a = { 1, 2, 3, 4, 5 };
+            int number = 6;
+            int foundAt=0;
+
+            foundAt = linearSearch(a, number);
+
+            if (foundAt == -1)
+            {
+                Console.WriteLine("Our Value is not found");
+            }
+            else
+            {
+                Console.WriteLine("Our Value is found at " + foundAt);
+            }
+        }
+        //static int linearSearch(int [] array,int numberToFind)
+
+        static int linearSearch(int numberToFind, int[] array)
+
+        {
+            int index = 0;
+            Boolean found = false;
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (array[i] == numberToFind)
+                {
+                    index = i;
+                    found = true;
+                    break;
+
+                }
+
+            }
+            if (found == true)
+            {
+                return index;
+            }
+            else
+            {
+                return -1;
+            }
+            
+        }
+
+        
+
+       
+    }
+}
